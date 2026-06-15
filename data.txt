@@ -1,3 +1,4 @@
 Loyihalar ro'yxati
 
 1. calculator   # 15.06.2026
+2. bmi calculator   # 15.06.2026
