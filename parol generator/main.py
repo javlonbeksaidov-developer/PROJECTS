@@ -2,7 +2,9 @@
 '''
 Parol generator function
 
-
+1. 8tadan kam bo'lmagan parollarni genaratsiyalab beradi.
+2. belgi, harf va raqam
+3. random , while, if-elif-else
 '''
 
 import random
@@ -65,7 +67,6 @@ def password_random(number : int):
         elif tanlov == 3 and len(raqamlar) > 0:
             tayyor_parol += raqamlar[0]
             raqamlar = raqamlar[1:]
-
 
     return tayyor_parol
 
