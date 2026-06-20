@@ -2,19 +2,24 @@
 '''
 Prime Number Checker
 
-1. Kiritgan sonni tub son ekanligini aniqlaydi.
+1. Kiritilgan sonni tub son yoki murakkab son ekanligini aniqlaydi.
 2. Kiritilgan sonni bo'luvchilarini aniqlaydi.
+3. Kiritilgan songacha bo'lgan tub sonlar ro'yhatini aniqlaydi.
 '''
 
-def tub(son):
-    count = 0
-    for i in range(2, son + 1):
-        if son % i == 0:
-            count += 1
+def tubmi(son):
+    if son <= 1:
+        return False
     
-    if count == 0 or count == 1:
-        return f"{son} tub son"
-    return f"{son} tub son emas"
+    count = 1
+    stop = int(pow(son, 0.5))
+    for i in range(1, stop + 1):
+        if son % i == 0:
+            count += 1        
+
+    if count == 2:
+        return True
+    return False
 
 def buluvchi(son):
     count = 1
@@ -25,9 +30,18 @@ def buluvchi(son):
             buluvchi = buluvchi + ", " + str(i)
     return f"{son} son bo'luvchilari ({buluvchi}).\n Jami bo'luvchilar soni {count}ta"
 
+def tub_sonlar(son):
+    tub_sonlar_list = []
+
+    for i in range(2, son + 1):
+        if tubmi(i):
+            tub_sonlar_list.append(i)
+
+    return f"0 dan {son} gacha bo'lgan tub sonlar: {tub_sonlar_list}"
+
 
 def main():
-    print("Butun son kiriting (1 - ...). Tark etish uchun (0).")
+    print("Musbat son kiriting (1 - ...). Tark etish uchun (0).")
     while True:
         son = int(input("Son: "))
 
@@ -35,13 +49,17 @@ def main():
             break
 
         if son < 0:
-            print("Butun son kiriting (1 - ...). Tark etish uchun (0).")
+            print("Musbat son kiriting (1 - ...). Tark etish uchun (0).")
             continue
 
-        result_1 = tub(son)
-        result_2 = buluvchi(son)
+        if son == 1:
+            print("1 tub son ham emas, murakkab son ham emas.")
+        elif tubmi(son):
+            print(f"{son} tub son")
+        else:
+            print(f"{son} murakkab son")
 
-        print(result_1)
-        print(result_2)
+        print(buluvchi(son))
+        print(tub_sonlar(son))
 
 main()
