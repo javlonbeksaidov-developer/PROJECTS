@@ -17,6 +17,7 @@ Yangi loyihalar yaratilgan sanasi bo'yicha ketma-ketlikda qo'shib boriladi.
 | **05** | `parol generator` | Xavfsiz va kuchli parollar yaratib beruvchi dastur | Python (String, Random) | 18.06.2026 |
 | **06** | `file juft-toq` | Sonlar oralig'ini faylga juft va toq qilib ajratib yozuvchi dastur | Python (File I/O) | 19.06.2026 |
 | **07** | `davlat topish` | Kompyuter biron davlat o'ylaydi, davlatni harflar kiritish orqali topish o'yini | Python | 21.06.2026 |
+| **08** | `tosh-qaychi-qogoz` | Kompyuter bilan tosh-qaychi-qogoz topish o'yini | Python (random, while, if-elif-else) | 21.06.2026 |
 ---
 
 ## 🛠 Qanday ishga tushirish mumkin?
