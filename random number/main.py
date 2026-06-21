@@ -43,14 +43,14 @@ def main():
                 print(number)
 
                 qadam = 7
-                attempt = 0
+                urinish = 0
                 ball = 100
 
         guess = int(input("Son: "))
         if not (1 <= guess <= 100):
             print("1 dan 100 gacha bo'lgan son kiriting!")
             continue
-        attempt += 1
+        urinish += 1
 
         result = check(number, guess)
         print(result)
