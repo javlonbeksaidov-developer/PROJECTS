@@ -6,3 +6,4 @@ Loyihalar ro'yxati
 4. tub son          # 16.06.2026
 4. parol generator  # 18.06.2026
 5. file juft-toq    # 19.06.2026
+6. davlat topish    # 21.06.2026
